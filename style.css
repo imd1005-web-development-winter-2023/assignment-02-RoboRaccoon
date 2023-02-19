@@ -1,3 +1,70 @@
 /*
   CSS File
 */
+
+/*Adding aborder around everything to see how they're organized*/
+/**{
+  border: 1px solid red;
+}
+*/
+.page {
+  /*Page div take full width and height of page*/
+  min-width: 100%;
+  min-height: 100%;
+
+  /* Flex directives */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header {
+  background-color: black;
+  padding: 30px 30px;
+}
+
+.header--banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header--banner--logo {
+  display: flex;
+  justify-content: flex-start;
+  height: 100px;
+}
+
+.header--banner--nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 30px;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.header--banner--nav ul li a {
+  font-weight: 100;
+  padding: 45px 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.header--banner--nav ul li a:hover {
+  background-color: white;
+  padding: 45px 15px;
+  font-weight: 100;
+  color: black;
+  text-decoration: underline;
+}
+
+body {
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: black;
+  min-height: 100%;
+  min-width: 100%;
+}
