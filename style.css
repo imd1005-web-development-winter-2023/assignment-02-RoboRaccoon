@@ -2,11 +2,12 @@
   CSS File
 */
 
-/*Adding aborder around everything to see how they're organized*/
-/**{
+/* Adding aborder around everything to see how they're organized*/
+/*{
   border: 1px solid red;
-}
-*/
+}*/
+
+/* Page section */
 .page {
   /*Page div take full width and height of page*/
   min-width: 100%;
@@ -19,6 +20,7 @@
   flex-wrap: wrap;
 }
 
+/* Header Section */
 header {
   background-color: black;
   padding: 30px 30px;
@@ -56,10 +58,91 @@ header {
 .header--banner--nav ul li a:hover {
   background-color: white;
   padding: 45px 15px;
+  border-radius: 10px 10px;
   font-weight: 100;
   color: black;
   text-decoration: underline;
 }
+
+/* Main Section */
+main {
+  align-self: center;
+  color: white;
+}
+
+.main--hero {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.main--hero .box {
+  grid-row-start: 1;
+  grid-row-end: -1;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.main--hero img {
+  grid-row-start: 1;
+  grid-row-end: -1;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+/* h1 */
+.main--hero h1 {
+  grid-row-start: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+/* About */
+.main--hero h2 {
+  grid-row-start: 4;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  padding-top: 3rem;
+  font-weight: 500;
+}
+
+/* About description */
+.main--hero p {
+  grid-row-start: 5;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  font-weight: 200;
+}
+
+.button {
+  grid-row-start: 7;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  
+  border-radius: 10px;
+  padding-top: 35px;
+  font-weight: 100;
+  color: white;
+  background-color: #560097;
+  text-decoration: none;
+}
+
+.button:hover {
+  grid-row-start: 7;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  
+  border-radius: 10px;
+  padding-top: 35px;
+  font-weight: 100;
+  color: #8900f2;
+  background-color: white;
+  text-decoration: underline;
+}
+
 
 body {
   text-align: center;
