@@ -241,6 +241,44 @@ main {
 
 /* Section 3 - Environments */
 
+.section--3 h2 {
+  padding: 100px;
+}
+
+.section--3 .photos {
+  display: flex;
+  flex-direction: column;
+  
+  padding: 40px;
+  gap: 40px;
+  align-items: center;
+
+  background-color: #19002b;
+  box-shadow: 0px 0px 30px 2px #8900f2;
+}
+
+.section--3 .card-1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.section--3 .text {
+  display: flex;
+  flex-direction: column;
+}
+
+.section--3 .photo-1 {
+  max-width: 500px;
+}
+
+.section--3 .photo-2 {
+  max-width: 500px;
+}
+
+.section--3 .photo-3 {
+  max-width: 500px;
+}
+
 body {
   text-align: center;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
