@@ -3,7 +3,7 @@
 */
 
 /* Adding aborder around everything to see how they're organized*/
-*{
+/*{
   border: 1px solid red;
 }
 
@@ -158,7 +158,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 40px;
+  padding: 60px;
 
   background-color: #19002b;
   /* looked up how to add a glow - we can just use box-shadow: */
@@ -202,7 +202,7 @@ main {
   grid-template-rows: repeat(2, 700px);
 
   justify-content: center;
-  padding: 40px;
+  padding: 60px;
   gap: 100px;
 
   background-color: #19002b;
@@ -239,7 +239,7 @@ main {
   border-radius: 10px;
 }
 
-/* Section 3 - Environments */
+/* Section 3 - Photography */
 
 .section--3 h2 {
   padding: 100px;
@@ -249,34 +249,77 @@ main {
   display: flex;
   flex-direction: column;
   
-  padding: 40px;
-  gap: 40px;
+  padding: 60px;
+  gap: 100px;
   align-items: center;
 
   background-color: #19002b;
-  box-shadow: 0px 0px 30px 2px #8900f2;
+  box-shadow: 0px 0px 30px 2px rgb(137, 0, 242);
 }
 
-.section--3 .card-1 {
-  display: flex;
-  flex-direction: row;
-}
+/* Card text format */
 
 .section--3 .text {
   display: flex;
   flex-direction: column;
+  justify-content: top;
+  padding: 80px;
+  min-width: 500px;
+
+  background-color: rgba(137, 0, 242, 0.3);
+}
+
+.section--3 .text h3 {
+  display: flex;
+  justify-content: left;
+  padding-bottom: 30px;
+}
+
+.section--3 .text p {
+  font-weight: 100;
+  text-align: left;
+}
+
+/* Card 1 */
+.section--3 .card-1 {
+  display: flex;
+  flex-direction: row;
+  
+  /*overflow: hidden; is used to make sure the conrens are rounded on the card*/
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .section--3 .photo-1 {
-  max-width: 500px;
+  max-width: 1000px;
+}
+
+/* Card 2 */
+
+.section--3 .card-2 {
+  display: flex;
+  flex-direction: row-reverse;
+
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .section--3 .photo-2 {
-  max-width: 500px;
+  max-width: 1000px;
+}
+
+/* Card 3 */
+
+.section--3 .card-3 {
+  display: flex;
+  flex-direction: row;
+
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .section--3 .photo-3 {
-  max-width: 500px;
+  max-width: 1000px;
 }
 
 body {
