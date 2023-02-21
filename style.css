@@ -385,16 +385,35 @@ footer {
   grid-column-end: -1;
 
   font-weight: 100;
-  margin-right: 50%;
+  margin-left: 50%;
+  border-radius: 10px;
   color: white;
   background-color:#8900f2;
 }
 
 .contact button:hover {
   font-weight: 100;
+  border-radius: 10px;
   color: #8900f2;
   background-color: white;
-  text-decoration: underline;
+}
+
+.contact .reset {
+  grid-row-start: -1;
+  grid-column-end: -1;
+
+  font-weight: 100;
+  margin-right: 55%;
+  border-radius: 10px;
+  color: white;
+  background-color:#560097;
+}
+
+.contact .reset:hover {
+  font-weight: 100;
+  border-radius: 10px;
+  color: #560097;
+  background-color: white;
 }
 
 /* Footer Follow Socials */
