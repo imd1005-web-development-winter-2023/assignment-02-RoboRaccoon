@@ -24,6 +24,7 @@
 header {
   background-color: black;
   padding: 30px 30px;
+  
 }
 
 .header--banner {
@@ -67,68 +68,57 @@ header {
 
 /* Main Section */
 main {
-  align-self: center;
+  align-self: space-between;
   color: white;
 }
 
 /* Hero Section */
 .main--hero {
-  display: grid;
-  grid-template-rows: repeat(10, 1fr);
-  grid-template-columns: repeat(9, 1fr);
+  display: flex;
+  padding-right: 75%;
+  box-shadow: 0px 0px 30px 2px #8900f2;
 }
 
 .main--hero .box {
-  grid-row-start: 1;
-  grid-row-end: -1;
-  grid-column-start: 1;
-  grid-column-end: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 700px;
   background-color: rgba(0, 0, 0, 0.5);
-}
-
-.main--hero .img {
-  grid-row-start: 1;
-  grid-row-end: -1;
-  grid-column-start: 1;
-  grid-column-end: -1;
 }
 
 /* h1 */
 .main--hero h1 {
-  grid-row-start: 3;
-  grid-column-start: 1;
-  grid-column-end: 4;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 /* About */
+
+.main--hero .about {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+} 
+
 .main--hero h2 {
-  grid-row-start: 4;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  padding-top: 3rem;
-  font-weight: 500;
+  padding: 20px;
 }
 
 /* About description */
 .main--hero p {
-  grid-row-start: 5;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  font-weight: 200;
+  padding: 40px;
+  font-weight: 100;
 }
 
 /* Learn More Button */
 .main--hero .button {
-  grid-row-start: 7;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
   border-radius: 10px;
-  margin: 15px;
-  padding-top: 25px;
-
   font-weight: 100;
   color: white;
   background-color: #560097;
@@ -137,14 +127,9 @@ main {
 }
 
 .main--hero .button:hover {
-  grid-row-start: 7;
-  grid-column-start: 2;
-  grid-column-end: 3;
   
   border-radius: 10px;
-  padding-top: 25px;
   font-weight: 100;
-
   color: #8900f2;
   background-color: white;
   text-decoration: underline;
@@ -153,11 +138,13 @@ main {
 /* Section 1 - Figure Drawings*/
 
 .section--1 h2 {
+  background-color: rgb(255, 255, 255, 0.1);
+  text-shadow: 0px 2px 2px black;
   padding: 100px;
 }
 
 .section--1 .main {
-  background-color: #19002b;
+  background-color: rgb(25, 0, 43);
   box-shadow: 0px 0px 30px 2px #8900f2;
 }
 
@@ -204,6 +191,8 @@ main {
 
 .section--2 h2 {
   padding: 100px;
+  background-color: rgb(255, 255, 255, 0.1);
+  text-shadow: 0px 2px 2px black;
 }
 
 .section--2 .characters {
@@ -216,7 +205,7 @@ main {
   padding: 60px;
   gap: 100px;
 
-  background-color: #19002b;
+  background-color: rgb(25, 0, 43, 0.8);
   box-shadow: 0px 0px 30px 2px #8900f2;
 }
 
@@ -242,7 +231,7 @@ main {
   gap: 20px;
   font-weight: 100;
   border-radius: 10px;
-  background-color: rgb(137, 0, 242, 0.1);
+  background-color: rgb(86, 0, 151, 0.6);
 }
 
 .section--2
@@ -289,6 +278,8 @@ main {
 /* Section 3 - Photography */
 
 .section--3 h2 {
+  background-color: rgb(255, 255, 255, 0.1);
+  text-shadow: 0px 2px 2px black;
   padding: 100px;
 }
 
@@ -327,18 +318,29 @@ main {
   text-align: left;
 }
 
-/* Card 1 */
-.section--3 .card-1 {
+.section--3 
+.photo-1,
+.photo-2,
+.photo-3 {
+  width: 1000px;
+  transition: 0.5s;
+}
+
+.section--3
+.photo-1:hover,
+.photo-2:hover,
+.photo-3:hover {
+  filter:contrast(120%);
+}
+
+/* Card 1 and 3*/
+.section--3 .card-1, .card-3 {
   display: flex;
   flex-direction: row;
   
   /*overflow: hidden; is used to make sure the conrens are rounded on the card*/
   overflow: hidden;
   border-radius: 10px;
-}
-
-.section--3 .photo-1 {
-  max-width: 1000px;
 }
 
 /* Card 2 */
@@ -351,23 +353,6 @@ main {
   border-radius: 10px;
 }
 
-.section--3 .photo-2 {
-  max-width: 1000px;
-}
-
-/* Card 3 */
-
-.section--3 .card-3 {
-  display: flex;
-  flex-direction: row;
-
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.section--3 .photo-3 {
-  max-width: 1000px;
-}
 
 /* Footer Section */
 
@@ -376,7 +361,7 @@ footer {
   flex-direction: column;
   padding: 30px; 
   color: white; 
-  background-color: black;
+  background-color: rgb(0, 0, 0, 0.5);
 }
 
 /* Contact Area */
@@ -547,6 +532,10 @@ footer {
   padding-top: 50px;
   padding-bottom: 25px;
   margin-top: 100px;
+  margin-bottom: -30px;
+  margin-left: -30px;
+  margin-right: -30px;
+  background-color: black;
   border-top: 2px solid white;
 }
 
@@ -554,6 +543,7 @@ footer {
   display: flex;
   justify-content: flex-start;
   height: 100px;
+  padding-left: 50px;
 }
 
 .footer--banner--nav ul {
@@ -592,7 +582,7 @@ footer {
 }
 
 .footer--copyright {
-  padding: 20px;
+  padding-right: 50px;
   font-weight: 100;
   font-size: small;
   color: white;
@@ -601,7 +591,14 @@ footer {
 body {
   text-align: center;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: black;
   min-height: 100%;
   min-width: 100%;
+  background-color: black;
+  
+  /* making the orange planet a paralax */
+  background-image: url("images/Orange_Plane.png");
+  height: 100%;
+  background-attachment: fixed;
+  background: cover;
+  
 }
