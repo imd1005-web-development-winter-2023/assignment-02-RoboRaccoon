@@ -266,14 +266,6 @@ main {
   opacity: 0;
 }
 
-.section--2 
-.sketch-1:target, 
-.sketch-2:target,
-.sketch-3:target, 
-.sketch-4:target {
-  opacity: 0;
-}
-
 
 /* Section 3 - Photography */
 
@@ -334,7 +326,8 @@ main {
 }
 
 /* Card 1 and 3*/
-.section--3 .card-1, .card-3 {
+.section--3 .card-1,
+.section--3 .card-3 {
   display: flex;
   flex-direction: row;
   
