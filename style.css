@@ -39,6 +39,10 @@ header {
   height: 100px;
 }
 
+.header--banner--logo:hover {
+  filter:brightness(150%);
+}
+
 .header--banner--nav ul {
   display: flex;
   flex-direction: row;
@@ -537,6 +541,10 @@ footer {
   justify-content: flex-start;
   height: 100px;
   padding-left: 50px;
+}
+
+.footer--logo:hover {
+  filter:brightness(150%);
 }
 
 .footer--banner--nav ul {
