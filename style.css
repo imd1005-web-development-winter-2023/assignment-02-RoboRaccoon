@@ -53,6 +53,7 @@ header {
   padding: 45px 15px;
   color: white;
   text-decoration: none;
+  transition: 0.5s;
 }
 
 .header--banner--nav ul li a:hover {
@@ -132,6 +133,7 @@ main {
   color: white;
   background-color: #560097;
   text-decoration: none;
+  transition: 0.5s;
 }
 
 .main--hero .button:hover {
@@ -154,19 +156,23 @@ main {
   padding: 100px;
 }
 
+.section--1 .main {
+  background-color: #19002b;
+  box-shadow: 0px 0px 30px 2px #8900f2;
+}
+
 .section--1 .drawings {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding: 60px;
 
-  background-color: #19002b;
   /* looked up how to add a glow - we can just use box-shadow: */
   /* x offset, y offset, blur size, spread size, color*/
   /* web site used: 
       https://codersblock.com/blog/creating-glow-effects-with-css/
   */
-  box-shadow: 0px 0px 30px 2px #8900f2;
+  
 }
 
 .section--1 .drawing-1 {
@@ -182,6 +188,10 @@ main {
 .section--1 .drawing-3 {
   max-height: 500px;
   border-radius: 10px;
+}
+
+.section--1 p {
+  padding-bottom: 60px; 
 }
 
 /* Section 2 - Characters */
@@ -209,35 +219,57 @@ main {
   box-shadow: 0px 0px 30px 2px #8900f2;
 }
 
-.section--2 .character-1 {
-  max-height: 700px;
-  min-height: 700px;
+/* setting the sizees of each image */
+.section--2 
+.sketch-1, .character-1, 
+.sketch-2, .character-2,
+.sketch-3, .character-3,
+.sketch-4, .character-4 {
+  height: 700px;
   border-radius: 10px;
+  transition: 1s;
 }
-/*
-.section--2 .character-1:hover {
+
+.section--2
+.sketch-1, .character-1 {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.section--2
+.sketch-2, .character-2 {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+
+.section--2
+.sketch-3, .character-3 {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+
+.section--2
+.sketch-4, .character-4 {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+.section--2 
+.sketch-1:hover, 
+.sketch-2:hover,
+.sketch-3:hover, 
+.sketch-4:hover {
   opacity: 0;
 }
-*/
-.section--2 .character-2 {
-  max-height: 700px;
-  min-height: 700px;
-  border-radius: 10px;
 
+.section--2 
+.sketch-1:target, 
+.sketch-2:target,
+.sketch-3:target, 
+.sketch-4:target {
+  opacity: 0;
 }
 
-.section--2 .character-3 {
-  max-height: 700px;
-  min-height: 700px;
-  border-radius: 10px;
-  
-}
-
-.section--2 .character-4 {
-  max-height: 700px;
-  min-height: 700px;
-  border-radius: 10px;
-}
 
 /* Section 3 - Photography */
 
@@ -374,10 +406,32 @@ footer {
   text-align: left;
 }
 
+.contact input {
+  border-radius: 5px;
+  color: white;
+  border: 2px solid white;
+  background-color: black;
+}
+
+.contact input:focus {
+  color: black;
+  background-color: white;
+}
+
 .contact .message--box {
   grid-row-start: 3;
   grid-row-end: -2;
   grid-column-start: 2;
+
+  border-radius: 5px;
+  color: white;
+  border: 2px solid white;
+  background-color: black;
+}
+
+.contact .message--box:focus {
+  color: black;
+  background-color: white;
 }
 
 .contact button {
@@ -387,6 +441,8 @@ footer {
   font-weight: 100;
   margin-left: 50%;
   border-radius: 10px;
+  transition: 0.5s;
+  border: 1px black;
   color: white;
   background-color:#8900f2;
 }
@@ -405,6 +461,8 @@ footer {
   font-weight: 100;
   margin-right: 55%;
   border-radius: 10px;
+  transition: 0.5s;
+  border: 1px black;
   color: white;
   background-color:#560097;
 }
@@ -414,6 +472,10 @@ footer {
   border-radius: 10px;
   color: #560097;
   background-color: white;
+}
+
+.contact .reset:focus {
+  opacity: 20%;
 }
 
 /* Footer Follow Socials */
@@ -432,64 +494,27 @@ footer {
   justify-content: space-between;
 }
 
-/* facebook button */
-.follow-1 {
-  padding: 5px;
-  border-radius: 10px;
-  background-color: white;
-  border-color: black;
-}
-
-.follow-1:hover {
-  padding: 5px;
-  border: 2px solid black;
-  border-radius: 10px;
-  filter: invert();
-}
-
-/* instagrm button */
-.follow-2 {
-  padding: 5px;
-  border-radius: 10px;
-  background-color: white;
-}
-
-.follow-2:hover {
-  padding: 5px;
-  border: 2px solid black;
-  border-radius: 10px;
-  filter: invert();
-  border-color: black;
-}
-
-/* pintrest button */
-.follow-3 {
-  padding: 5px;
-  border-radius: 10px;
-  background-color: white;
-}
-
-.follow-3:hover {
-  padding: 5px;
-  border: 2px solid black;
-  border-radius: 10px;
-  filter: invert();
-  border-color: black;
-}
-
-/* discord button */
+/* follow social media buttons */
+.follow-1,
+.follow-2,
+.follow-3,
 .follow-4 {
   padding: 5px;
   border-radius: 10px;
+  transition: 0.5s;
   background-color: white;
+  border: 2px solid white;
 }
 
+.follow-1:hover,
+.follow-2:hover,
+.follow-3:hover,
 .follow-4:hover {
   padding: 5px;
   border: 2px solid black;
   border-radius: 10px;
   filter: invert();
-  border-color: black;
+  box-shadow: 0px 0px 15px 2px black;
 }
 
 /* hopping penguin */
@@ -499,6 +524,12 @@ footer {
 }
 
 /* Footer Banner */
+
+.footer--banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .footer--logo {
   display: flex;
