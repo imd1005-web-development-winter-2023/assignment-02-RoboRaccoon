@@ -598,7 +598,7 @@ body {
   background-color: black;
   
   /* making the orange planet a paralax */
-  background-image: url("images/Orange_Plane.png");
+  background-image: url("images/Orange_Planet.png");
   height: 100%;
   background-attachment: fixed;
   background: cover;
