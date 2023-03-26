@@ -1,3 +1,606 @@
 /*
   CSS File
 */
+
+/* Adding aborder around everything to see how they're organized*/
+/*{
+  border: 1px solid red;
+}
+
+/* Page section */
+.page {
+  /*Page div take full width and height of page*/
+  min-width: 100%;
+  min-height: 100%;
+
+  /* Flex directives */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Header Section */
+header {
+  background-color: black;
+  padding: 30px 30px;
+  
+}
+
+.header--banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header--banner--logo {
+  display: flex;
+  justify-content: flex-start;
+  height: 100px;
+}
+
+.header--banner--logo:hover {
+  filter:brightness(150%);
+}
+
+.header--banner--nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 30px;
+  font-weight: 100;
+  font-size: larger;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.header--banner--nav ul li a {
+  padding: 45px 15px;
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.header--banner--nav ul li a:hover {
+  background-color: white;
+  padding: 45px 15px;
+  border-radius: 10px 10px;
+  color: black;
+  text-decoration: underline;
+}
+
+/* Main Section */
+main {
+  align-self: space-between;
+  color: white;
+}
+
+/* Hero Section */
+.main--hero {
+  display: flex;
+  padding-right: 75%;
+  box-shadow: 0px 0px 30px 2px #8900f2;
+}
+
+.main--hero .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 700px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* h1 */
+.main--hero h1 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* About */
+
+.main--hero .about {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+} 
+
+.main--hero h2 {
+  padding: 20px;
+}
+
+/* About description */
+.main--hero p {
+  padding: 40px;
+  font-weight: 100;
+}
+
+/* Learn More Button */
+.main--hero .button {
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
+  border-radius: 10px;
+  font-weight: 100;
+  color: white;
+  background-color: #560097;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.main--hero .button:hover {
+  
+  border-radius: 10px;
+  font-weight: 100;
+  color: #8900f2;
+  background-color: white;
+  text-decoration: underline;
+}
+
+/* Section 1 - Figure Drawings*/
+
+.section--1 h2 {
+  background-color: rgb(255, 255, 255, 0.1);
+  text-shadow: 0px 2px 2px black;
+  padding: 100px;
+}
+
+.section--1 .main {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: rgb(25, 0, 43);
+  box-shadow: 0px 0px 30px 2px #8900f2;
+}
+
+.section--1 .drawings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+
+  /* looked up how to add a glow - we can just use box-shadow: */
+  /* x offset, y offset, blur size, spread size, color*/
+  /* web site used: 
+      https://codersblock.com/blog/creating-glow-effects-with-css/
+  */
+  
+}
+
+.section--1 
+.drawing-1,
+.drawing-2,
+.drawing-3 {
+  height: 500px;
+  margin: 60px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.section--1 
+.drawing-1:hover,
+.drawing-2:hover,
+.drawing-3:hover {
+  height: 600px;
+  margin: 0px;
+  border-radius: 10px;
+}
+
+.section--1 p {
+  font-weight: 100;
+}
+
+/* Section 2 - Characters */
+
+.section--2 h2 {
+  padding: 100px;
+  background-color: rgb(255, 255, 255, 0.1);
+  text-shadow: 0px 2px 2px black;
+}
+
+.section--2 .characters {
+
+  display: grid;
+  grid-template-columns: repeat(2, 700px);
+  grid-template-rows: repeat(2, 1fr);
+
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  gap: 100px;
+
+  background-color: rgb(25, 0, 43, 0.8);
+  box-shadow: 0px 0px 30px 2px #8900f2;
+}
+
+/* setting the sizees of each image */
+.section--2 
+.sketch-1, .character-1, 
+.sketch-2, .character-2,
+.sketch-3, .character-3,
+.sketch-4, .character-4 {
+  height: 700px;
+  border-radius: 10px;
+  transition: 0.8s;
+}
+
+.section--2 .text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  padding-left: 10%;
+  margin-top: 20px;
+  gap: 20px;
+  font-weight: 100;
+  border-radius: 10px;
+  background-color: rgb(86, 0, 151, 0.6);
+}
+
+.section--2
+.card-1, .character-1 {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.section--2
+.card-2, .character-2 {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+
+.section--2
+.card-3, .character-3 {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+
+.section--2
+.card-4, .character-4 {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+.section--2 
+.sketch-1:hover, 
+.sketch-2:hover,
+.sketch-3:hover, 
+.sketch-4:hover {
+  opacity: 0;
+}
+
+
+/* Section 3 - Photography */
+
+.section--3 h2 {
+  background-color: rgb(255, 255, 255, 0.1);
+  text-shadow: 0px 2px 2px black;
+  padding: 100px;
+}
+
+.section--3 .photos {
+  display: flex;
+  flex-direction: column;
+  
+  padding: 60px;
+  gap: 100px;
+  align-items: center;
+
+  background-color: #19002b;
+  box-shadow: 0px 0px 30px 2px rgb(137, 0, 242);
+}
+
+/* Card text format */
+
+.section--3 .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  padding: 80px;
+  min-width: 500px;
+
+  background-color: rgba(137, 0, 242, 0.3);
+}
+
+.section--3 .text h3 {
+  display: flex;
+  justify-content: left;
+  padding-bottom: 30px;
+}
+
+.section--3 .text p {
+  font-weight: 100;
+  text-align: left;
+}
+
+.section--3 
+.photo-1,
+.photo-2,
+.photo-3 {
+  width: 1000px;
+  transition: 0.5s;
+}
+
+.section--3
+.photo-1:hover,
+.photo-2:hover,
+.photo-3:hover {
+  filter:contrast(120%);
+}
+
+/* Card 1 and 3*/
+.section--3 .card-1,
+.section--3 .card-3 {
+  display: flex;
+  flex-direction: row;
+  
+  /*overflow: hidden; is used to make sure the conrens are rounded on the card*/
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Card 2 */
+
+.section--3 .card-2 {
+  display: flex;
+  flex-direction: row-reverse;
+
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+
+/* Footer Section */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 30px; 
+  color: white; 
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+/* Contact Area */
+
+.contact--main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+.contact--main h3 {
+  text-align: left;
+}
+
+/* Contact Form Section */
+
+.contact h2 {
+  display: flex;
+  justify-content: left;
+  padding-top: 50px;
+  padding-left: 100px;
+}
+
+.contact .form h3 {
+  padding-left: 100px;
+}
+
+.contact .form--info {
+  display: grid;
+  grid-template-columns: 10rem 20rem;
+  grid-template-rows: repeat(6, 2rem);
+  justify-content: left;
+
+  gap: 20px;
+  padding-left: 100px;
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+
+.contact .label {
+  text-align: left;
+}
+
+.contact input {
+  border-radius: 5px;
+  color: white;
+  border: 2px solid white;
+  background-color: black;
+}
+
+.contact input:focus {
+  color: black;
+  background-color: white;
+}
+
+.contact .message--box {
+  grid-row-start: 3;
+  grid-row-end: -2;
+  grid-column-start: 2;
+
+  border-radius: 5px;
+  color: white;
+  border: 2px solid white;
+  background-color: black;
+}
+
+.contact .message--box:focus {
+  color: black;
+  background-color: white;
+}
+
+.contact button {
+  grid-row-start: -1;
+  grid-column-end: -1;
+
+  font-weight: 100;
+  margin-left: 50%;
+  border-radius: 10px;
+  transition: 0.5s;
+  border: 1px black;
+  color: white;
+  background-color:#8900f2;
+}
+
+.contact button:hover {
+  font-weight: 100;
+  border-radius: 10px;
+  color: #8900f2;
+  background-color: white;
+}
+
+.contact .reset {
+  grid-row-start: -1;
+  grid-column-end: -1;
+
+  font-weight: 100;
+  margin-right: 55%;
+  border-radius: 10px;
+  transition: 0.5s;
+  border: 1px black;
+  color: white;
+  background-color:#560097;
+}
+
+.contact .reset:hover {
+  font-weight: 100;
+  border-radius: 10px;
+  color: #560097;
+  background-color: white;
+}
+
+.contact .reset:focus {
+  opacity: 20%;
+}
+
+/* Footer Follow Socials */
+
+.follow {
+  padding-right: 20%;
+}
+
+.follow--logos {
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-template-rows: repeat(1, 50px);
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content: space-between;
+}
+
+/* follow social media buttons */
+.follow-1,
+.follow-2,
+.follow-3,
+.follow-4 {
+  padding: 5px;
+  border-radius: 10px;
+  transition: 0.5s;
+  background-color: white;
+  border: 2px solid white;
+}
+
+.follow-1:hover,
+.follow-2:hover,
+.follow-3:hover,
+.follow-4:hover {
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 10px;
+  filter: invert();
+  box-shadow: 0px 0px 15px 2px black;
+}
+
+/* hopping penguin */
+.footer--penguin {
+  height: 350px;
+  border-radius: 10px;
+}
+
+/* Footer Banner */
+
+.footer--banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  margin-top: 100px;
+  margin-bottom: -30px;
+  margin-left: -30px;
+  margin-right: -30px;
+  background-color: black;
+  border-top: 2px solid white;
+}
+
+.footer--logo {
+  display: flex;
+  justify-content: flex-start;
+  height: 100px;
+  padding-left: 50px;
+}
+
+.footer--logo:hover {
+  filter:brightness(150%);
+}
+
+.footer--banner--nav ul {
+  display: flex;
+  flex-direction: row;
+  
+  gap: 100px;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+}
+
+.footer--banner--nav ul li a {
+  font-weight: 100;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer--banner--nav ul li a:hover {
+  font-weight: 100;
+  text-decoration: underline;
+  color: white;
+  /* text shadow oly needs 3 Xpx inputs 
+  opposed to box-shadow which needs 4 Xpx inputs
+  text-shadow:
+  x offset, y offset, blur size, color
+  box-shadow:
+  x offset, y offset, blur size, spread size, color*/
+  text-shadow:
+  0px 0px 10px white,
+  0px 0px 10px white,
+  0px 0px 10px white,
+  0px 0px 10px white;
+}
+
+.footer--copyright {
+  padding-right: 50px;
+  font-weight: 100;
+  font-size: small;
+  color: white;
+}
+
+body {
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100%;
+  min-width: 100%;
+  background-color: black;
+  
+  /* making the orange planet a paralax */
+  background-image: url("images/Orange_Planet.png");
+  height: 100%;
+  background-attachment: fixed;
+  background: cover;
+  
+}
